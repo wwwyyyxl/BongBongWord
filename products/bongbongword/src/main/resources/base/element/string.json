@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "BongbongwordAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "BongbongwordAbility_label",
+      "value": "label"
+    }
+  ]
+}
