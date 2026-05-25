@@ -5,6 +5,9 @@
   "main": "",
   "author": "",
   "license": "",
-  "dependencies": {}
+  "dependencies": {
+    "@bongbong/home": "file:../../features/home",
+    "@bongbong/basic": "file:../../commons/basic"
+  }
 }
 

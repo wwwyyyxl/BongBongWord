@@ -1,0 +1,24 @@
+{
+  "color": [
+    {
+      "name": "bb_color_brand",
+      "value": "#FF7A45"
+    },
+    {
+      "name": "bb_color_mint",
+      "value": "#B4E4C8"
+    },
+    {
+      "name": "bb_color_sakura",
+      "value": "#FFC8D1"
+    },
+    {
+      "name": "bb_color_cream",
+      "value": "#FFF8EE"
+    },
+    {
+      "name": "bb_color_ink",
+      "value": "#2A1F1A"
+    }
+  ]
+}
