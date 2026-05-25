@@ -2,7 +2,6 @@ import {
   BongBongColors,
   BongBongFontSize,
   BongBongRadius,
-  BongBongShadowColor,
   BongBongSpacing
 } from '@bongbong/basic';
 import { HomeEnergyCard } from '../components/HomeEnergyCard';
@@ -30,7 +29,7 @@ export struct HomeTabView {
         .align(Alignment.Top)
 
       Scroll() {
-        Column({ space: BongBongSpacing.xl }) {
+        Column({ space: BongBongSpacing.md }) {
           Row() {
             Column({ space: BongBongSpacing.xs }) {
               Text(this.state.greeting)
@@ -45,28 +44,23 @@ export struct HomeTabView {
 
             Blank()
 
-            Text('✉')
-              .fontSize(22)
-              .fontColor(BongBongColors.ink)
+            Image(HomeMedia.messageIcon)
               .width(52)
               .height(52)
-              .textAlign(TextAlign.Center)
-              .borderRadius(BongBongRadius.medium)
-              .backgroundColor(Color.White)
-              .shadow({ radius: 14, color: BongBongShadowColor.neutral, offsetX: 0, offsetY: 6 })
+              .objectFit(ImageFit.Contain)
           }
           .width('100%')
           .alignItems(VerticalAlign.Center)
-          .margin({ top: BongBongSpacing.xl })
+          .margin({ top: BongBongSpacing.xl, bottom: -BongBongSpacing.xs })
 
           Image(HomeMedia.lexiHome)
             .width('100%')
-            .height(210)
-            .objectFit(ImageFit.Contain)
-            .borderRadius(BongBongRadius.large)
+            .height(170)
+            .objectFit(ImageFit.Cover)
+            .borderRadius(BongBongRadius.medium)
 
           HomeEnergyCard({ value: this.state.energy, total: this.state.energyTotal })
-            .margin({ top: -BongBongSpacing.md })
+            .margin({ top: -BongBongSpacing.lg, left: BongBongSpacing.sm, right: BongBongSpacing.sm })
 
           TaskSummaryCard({
             finished: this.state.taskFinished,

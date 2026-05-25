@@ -27,9 +27,16 @@ struct Index {
   @Builder
   private TabBarBuilder(item: TabItem, index: number) {
     Column({ space: 2 }) {
-      Text(item.icon)
-        .fontSize(22)
-        .fontColor(this.currentTabIndex === index ? BongBongColors.brand : BongBongColors.muted)
+      if (this.currentTabIndex === index && index === 0) {
+        Image($r('app.media.tab_home_active'))
+          .width(26)
+          .height(24)
+          .objectFit(ImageFit.Contain)
+      } else {
+        Text(item.icon)
+          .fontSize(22)
+          .fontColor(this.currentTabIndex === index ? BongBongColors.brand : BongBongColors.muted)
+      }
 
       Text(item.title)
         .fontSize(12)

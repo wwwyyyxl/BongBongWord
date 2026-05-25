@@ -6,6 +6,7 @@ import {
   BongBongSpacing,
   EnergyProgress
 } from '@bongbong/basic';
+import { HomeMedia } from '../constants/HomeMedia';
 
 @Component
 export struct HomeEnergyCard {
@@ -14,13 +15,10 @@ export struct HomeEnergyCard {
 
   build() {
     Row({ space: BongBongSpacing.md }) {
-      Text('⚡')
-        .fontSize(22)
+      Image(HomeMedia.energyIcon)
         .width(44)
         .height(44)
-        .textAlign(TextAlign.Center)
-        .borderRadius(22)
-        .backgroundColor(BongBongColors.warmIcon)
+        .objectFit(ImageFit.Contain)
 
       Column({ space: BongBongSpacing.xs }) {
         Row() {
@@ -43,7 +41,7 @@ export struct HomeEnergyCard {
       .layoutWeight(1)
     }
     .width('100%')
-    .padding(BongBongSpacing.md)
+    .padding({ left: BongBongSpacing.md, right: BongBongSpacing.md, top: BongBongSpacing.sm, bottom: BongBongSpacing.sm })
     .borderRadius(BongBongRadius.pill)
     .backgroundColor(Color.White)
     .shadow({ radius: 20, color: BongBongShadowColor.brandSoft, offsetX: 0, offsetY: 8 })
